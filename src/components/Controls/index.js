@@ -1,6 +1,7 @@
 export {
     Button,
     Avatar,
+    Input,
 } from '@material-ui/core'
 
 

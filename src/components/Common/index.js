@@ -1,1 +1,4 @@
-export { withStyles } from '@material-ui/core/styles'
+export { 
+    withStyles,
+    Typography,
+} from '@material-ui/core'
