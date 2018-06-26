@@ -1,5 +1,4 @@
 import React from 'react'
-import IconButton from '@material-ui/core/IconButton'
 import { withStyles } from '../../Common'
 
 const PodiumButton = ({ classes }) => (
@@ -12,13 +11,9 @@ const PodiumButton = ({ classes }) => (
 
 const styles = theme => ({
     root: {
-        // display: 'flex',
-        // justifyContent: 'center',
-        // alignItems: 'center',
         cursor: 'pointer',
     },
     logo: {
-        // display: 'flex',
         height: '40px',
         marginRight: '20px',
     }
