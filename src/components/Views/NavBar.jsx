@@ -32,7 +32,7 @@ class NavBar extends React.Component {
           {menuList.map((item, i) => {
             if (item.icon) {
               return (
-                <Button variant='flat' key={i} className={Classnames(classes.button,{[classes.activeButton]: i === active})} onClick={() => this.setActive(i)}>
+                <Button key={i} className={Classnames(classes.button,{[classes.activeButton]: i === active})} onClick={() => this.setActive(i)}>
                   {item.title}
                   <DownArrow style={{marginRight: '0'}} className={Classnames(classes.button,{[classes.activeButton]: i === active})} />
                 </Button>
