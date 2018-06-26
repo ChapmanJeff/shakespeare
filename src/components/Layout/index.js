@@ -1,1 +1,7 @@
-export { default as NavBar } from '../Views/NavBar'
+export {
+    AppBar,
+    
+} from '@material-ui/core'
+
+/** Example of indexed custom components */
+// export { default as AppBar } from './AppBar'
