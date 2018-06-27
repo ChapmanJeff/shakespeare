@@ -1,10 +1,10 @@
 import { getDispatch } from '../store'
-import { fetchAllReviews } from '../actions/reviews.actions'
+import { fetchReviews } from '../actions/reviewActions'
 
 export const selectReviews = store => {
   const reviews = store.reviews
-
   if (reviews.size === 0) {
-    getDispatch()(fetchAllReviews())
+    getDispatch()(fetchReviews())
   }
+  return reviews
 }

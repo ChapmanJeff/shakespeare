@@ -13,7 +13,6 @@ export const composeStore = historyMiddleware => {
   store = createStore(reducers, composeWithDevTools(
     applyMiddleware(thunk, historyMiddleware),
   ))
-
   dispatch = store.dispatch
 
   return store

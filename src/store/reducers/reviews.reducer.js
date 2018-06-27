@@ -1,16 +1,14 @@
 import { fromJS, Map } from 'immutable'
 import actionDefs from '../actions/actionDefs'
 
-const setSession = (state, payload) =>
-  state.merge(fromJS({ session: payload }))
+const setReviews = (state, payload) => {
+  return state.merge(fromJS({ reviews: payload }))
+}
 
 const reducer = (state = Map(), action) => {
   switch (action.type) {
-    case actionDefs.Security.Session.Set:
-      return setSession(state, action.payload)
-
-    case actionDefs.Security.Session.Clear:
-      return Map()
+    case actionDefs.Reviews.Set:
+      return setReviews(state, action.payload)
 
     default:
       return state
