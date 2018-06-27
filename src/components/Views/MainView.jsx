@@ -51,7 +51,7 @@ const styles = theme => ({
   },
   progress: {
     display: 'flex',
-    flex: 1,
+    marginTop: theme.spacing.unit * 8,
     justifyContent: 'center',
     alignItems: 'center',
   },

@@ -1,5 +1,5 @@
 import { getDispatch } from '../store'
-import { fetchReviews } from '../actions/reviewActions'
+import { fetchReviews } from '../actions/reviews.actions'
 
 export const selectReviews = store => {
   const reviews = store.reviews
