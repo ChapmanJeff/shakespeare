@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Classnames from 'classnames'
 import DownArrow from '@material-ui/icons/KeyboardArrowDown'
 import Send from '@material-ui/icons/Send'
@@ -100,9 +99,5 @@ const styles = theme => ({
     },
   },
 })
-
-NavBar.propTypes = {
-  // clases: PropTypes.object,
-}
 
 export default withStyles(styles)(NavBar)

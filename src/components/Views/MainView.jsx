@@ -1,7 +1,6 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
-import { Switch, Route } from 'react-router-dom'
 import { withStyles, Typography } from '../Common'
 import { ReviewCard } from '../Layout'
 import { CircularProgress } from '../Controls'
@@ -15,10 +14,6 @@ const MainView = ({
 }) => (
     <div className={classes.main}>
       <NavBar />
-      {/* <Switch>
-        <Route path='/reviews' component={} />
-        <Route path='/reviews' component={} />
-      </Switch> */}
       <div className={classes.reviews}>
         <div className={classes.titleBox}>
           <Typography color='textSecondary' variant='title'>Reviews</Typography>

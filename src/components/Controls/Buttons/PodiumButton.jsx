@@ -3,9 +3,7 @@ import { withStyles } from '../../Common'
 
 const PodiumButton = ({ classes }) => (
     <div className={classes.root}>
-        {/* <IconButton> */}
-            <img src={require('../../../img/podium-green.png')} className={classes.logo} onClick={() => console.log('hi')} />
-        {/* </IconButton> */}
+        <img alt='send invite' src={require('../../../img/podium-green.png')} className={classes.logo} onClick={() => console.log('hi')} />
     </div>
 )
 
