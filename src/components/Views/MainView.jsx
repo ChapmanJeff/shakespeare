@@ -8,7 +8,6 @@ import NavBar from './NavBar'
 import { selectReviews } from '../../store/selectors/reviews.selectors'
 
 const MainView = ({
-  shows,
   reviews,
   classes,
 }) => (
@@ -58,7 +57,6 @@ const styles = theme => ({
 })
 
 const mapStoreToProps = store => ({
-  // reviews: {test:'hi'},
   reviews: selectReviews(store),
 })
 
