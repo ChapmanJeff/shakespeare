@@ -91,6 +91,7 @@ const styles = theme => ({
     marginRight: theme.spacing.unit,
   },
   greenButton: {
+    marginRight: theme.spacing.unit,
     borderRadius: 25,
     backgroundColor: '#30CF71',
     color: theme.palette.common.white,

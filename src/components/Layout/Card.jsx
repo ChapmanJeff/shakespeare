@@ -7,14 +7,20 @@ import { withStyles, Typography } from '../Common'
 import { Button, Input } from '../Controls'
 import { Card, Divider } from '.'
 
-const ReviewCard = ({ classes }) => (
+const ReviewCard = ({ 
+  classes,
+  rating,
+  name,
+  date,
+  review,
+}) => (
   <Card raised={false} className={classes.root}>
     <div className={classes.ratingContainer}>
       <div className={classes.rating}>
         <Button variant='contained' color='primary' size='small' className={classes.sourceButton}>
           Facebook
         </Button>
-        <Stars count={5} value={.8} edit={false}/>
+        <Stars count={5} value={rating} edit={false}/>
       </div>
       <div>
         <TagIcon color='action' />
@@ -22,11 +28,11 @@ const ReviewCard = ({ classes }) => (
     </div>
     <div className={classes.reviewContainer}>
       <div className={classes.nameLine}>
-        <Typography style={{marginRight: '15px'}} variant='body2'>Cameroon Boone</Typography>
-        <Typography color='textSecondary' variant='body1'>{`Published ${moment("2016-09-05T23:25:47.642350Z").fromNow()}`}</Typography>
+        <Typography style={{marginRight: '15px'}} variant='body2'>{name}</Typography>
+        <Typography color='textSecondary' variant='body1'>{`Published ${moment(date).fromNow()}`}</Typography>
       </div>
       <div>
-        <Typography variant='body1'>"The fool doth think he is wise, but the wise man knows himself to be a fool."</Typography>
+        <Typography variant='body1'>{review}</Typography>
       </div>
       <Divider className={classes.divider} />
       <div className={classes.replyContainer}>
@@ -45,9 +51,6 @@ const styles = theme => ({
     display: 'flex',
     flexDirection: 'column',
     marginBottom: theme.spacing.unit * 3,
-    // flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center',
   },
   ratingContainer: {
     display: 'flex',
@@ -66,11 +69,12 @@ const styles = theme => ({
     flexDirection: 'column',
   },
   nameLine: {
+    marginBottom: theme.spacing.unit,
     display: 'flex',
     alignItems: 'center',
   },
   divider: {
-    margin: `${theme.spacing.unit * 3}px 0`,
+    margin: `${theme.spacing.unit * 3}px 0 ${theme.spacing.unit * 4}px 0`,
   },
   replyContainer: {
     display: 'flex',
@@ -86,10 +90,10 @@ const styles = theme => ({
 })
 
 ReviewCard.propTypes = {
-  // company: PropTypes.string,
-  // rating: PropTypes.number,
-  // name: PropTypes.string,
-  // date: PropTypes.string,
+  rating: PropTypes.number,
+  name: PropTypes.string,
+  date: PropTypes.string,
+  review: PropTypes.string,
 }
 
 export default withStyles(styles)(ReviewCard)

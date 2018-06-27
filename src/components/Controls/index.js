@@ -2,6 +2,7 @@ export {
     Button,
     Avatar,
     Input,
+    CircularProgress,
 } from '@material-ui/core'
 
 
